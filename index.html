@@ -5,8 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ISTOS AI Service Portal</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    #toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1000;
+    }
+    #debugToggle {
+      margin-top: 20px;
+      background: #eee;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    #debugPanel {
+      display: none;
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+      font-size: 12px;
+    }
+  </style>
 </head>
 <body>
+
   <div class="container">
     <h2>ISTOS AI-Powered Service Assistant</h2>
     <form id="serviceForm">
@@ -28,12 +62,16 @@
       <button type="submit">Get AI Solution</button>
     </form>
 
-    <div id="result">
+    <div id="result" style="display:none;">
       <h2>Follow AI Solution</h2>
       <p id="solution"></p>
     </div>
+
+    <button id="debugToggle">Toggle Debug Panel</button>
+    <pre id="debugPanel"><code id="debugContent"></code></pre>
   </div>
+
+  <div id="toast"></div>
   <script src="script.js"></script>
 </body>
 </html>
-
