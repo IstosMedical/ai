@@ -3,7 +3,7 @@ const resultDiv = document.getElementById("result");
 const solutionText = document.getElementById("solution");
 
 // Replace with your Google Apps Script deployed URL
-const GAS_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+const GAS_URL = "https://script.google.com/macros/s/AKfycbzZPXJSEuPrS05gZLQ2yyy3Q7NdLSFuok58ShoJm2vArsmfgPNI0hjcDNUngYB7Fr7P/exec";
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
