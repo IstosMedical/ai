@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISTOS AI Service Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>AI-Powered Service Assistant</h1>
+    <form id="serviceForm">
+      <label for="machine">Machine Type</label>
+      <select id="machine" required>
+        <option value="Microtome">Microtome</option>
+        <option value="Tissue Processor">Tissue Processor</option>
+        <option value="Stainer">Stainer</option>
+        <option value="Embedding Station">Embedding Station</option>
+        <option value="Grossing Station">Grossing Station</option>
+      </select>
+
+      <label for="errorCode">Error Code / Symptom</label>
+      <input type="text" id="errorCode" placeholder="e.g. E45, blade stuck" required />
+
+      <label for="description">Issue Description</label>
+      <textarea id="description" rows="4" placeholder="Describe the issue..." required></textarea>
+
+      <button type="submit">Get AI Solution</button>
+    </form>
+
+    <div id="result">
+      <h2>AI Suggested Solution</h2>
+      <p id="solution"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
 
